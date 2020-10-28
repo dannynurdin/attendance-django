@@ -36,7 +36,7 @@ def record_view(request):
         form = RecordsForm(request.POST)
         if form.is_valid():
             form.save()
-    context['form']= TeacherForm() 
+    context['form']= RecordsForm() 
     return render(request, "record.html", context)
 
 def student_view(request):
@@ -46,4 +46,4 @@ def student_view(request):
         if form.is_valid():
             form.save()
     context['form']= StudentsForm() 
-    return render(request, "student.html", context)
+    return render(request, "teacher.html", context)
